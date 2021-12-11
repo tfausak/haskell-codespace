@@ -11,4 +11,6 @@ jobs:
       - uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/tfausak/haskell-codespace:${{ github.sha }}
+          tags: |
+            ghcr.io/tfausak/haskell-codespace:${{ github.sha }}
+            ghcr.io/tfausak/haskell-codespace:ghc-9.2.1
