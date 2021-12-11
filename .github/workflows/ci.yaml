@@ -12,6 +12,6 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/tfausak/haskell-codespace:commit-${{ github.sha }}
-            ghcr.io/tfausak/haskell-codespace:ghc-9.2.1
-            ghcr.io/tfausak/haskell-codespace:ghc-9.2
+            ghcr.io/${{ github.repository }}:commit-${{ github.sha }}
+            ghcr.io/${{ github.repository }}:ghc-9.2.1
+            ghcr.io/${{ github.repository }}:ghc-9.2
