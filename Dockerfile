@@ -28,3 +28,11 @@ ARG CABAL_VERSION=3.6.2.0
 RUN \
     ghcup install cabal "$CABAL_VERSION" --set && \
     cabal --version
+
+ARG HLINT_VERSION=3.3.4
+RUN \
+    curl --location --output hlint.tgz "https://github.com/ndmitchell/hlint/releases/download/v$HLINT_VERSION/hlint-$HLINT_VERSION-x86_64-linux.tar.gz" && \
+    tar --extract --file hlint.tgz && \
+    cp "hlint-$HLINT_VERSION/hlint" /usr/local/bin && \
+    rm --recursive hlint.tgz "hlint-$HLINT_VERSION" && \
+    hlint --version
