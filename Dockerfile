@@ -36,3 +36,10 @@ RUN \
     cp "hlint-$HLINT_VERSION/hlint" /usr/local/bin && \
     rm --recursive hlint.tgz "hlint-$HLINT_VERSION" && \
     hlint --version
+
+ARG BRITTANY_VERSION=0.14.0.0
+RUN \
+    curl --location --output brittany "https://github.com/tfausak/brittany/releases/download/$BRITTANY_VERSION/brittany-$BRITTANY_VERSION-ubuntu" && \
+    chmod +x brittany && \
+    mv brittany /usr/local/bin && \
+    brittany --version
