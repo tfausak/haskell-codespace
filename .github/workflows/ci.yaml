@@ -14,3 +14,4 @@ jobs:
           tags: |
             ghcr.io/tfausak/haskell-codespace:${{ github.sha }}
             ghcr.io/tfausak/haskell-codespace:ghc-9.2.1
+            ghcr.io/tfausak/haskell-codespace:ghc-9.2
