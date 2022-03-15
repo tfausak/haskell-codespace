@@ -1,3 +1,5 @@
+I would recommend using the official Haskell Docker image instead: <https://hub.docker.com/_/haskell>
+
 # Haskell codespace
 
 A Haskell development container for [GitHub Codespaces][1].
